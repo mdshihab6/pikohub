@@ -1196,7 +1196,7 @@ const movies = [
     releaseDate: "2025",
     imdbRating: 7.3,
     bannerLink: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRrfWjGBgRvXPWUDnUrthSQ0H-39UMrP218atbnW8eevpxu9U-cmk6Vi8QH8pdzpS7bjgavbPHDnRUqzxgXtGySyK9-uM-5diwiuuIsQvwARcotW8cQIg6Lntwjo62vbGmQ5pdI2dyOCLNdWkNc-BW3DGlqnSqGq5V0BQoBLuA7pQIF3cLvCo9ImJBGg/s1560/1000109597.jpg",
-    categories: ["Thriller", "Action"],
+    categories: ["Featured","Thriller", "Action"],
     downloadOptions: [
         {
             quality: "4K 2160p",
