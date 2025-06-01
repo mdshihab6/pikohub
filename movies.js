@@ -1158,7 +1158,7 @@ const movies = [
     {
     id: 34,
     title: "Marigold (2024) Hindi Dubbed",
-    releaseDate: "2024",
+    releaseDate: "April 5, 2024",
     imdbRating: 6.5,
     bannerLink: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoenQduChwONn5mFfLMWMMWSqf3Qju0nOqeXq0dxqOn71RvJGVTu0sxUwj96rg6aNVQoyJ61FtKp7PMPSYynKTsP4mIjbR7j8elahOeewUwMA17H3QgRVdGktcHpk3prPOVw9g67yIn3zqhLNCU2u9rmg8w_8jZOLCoNe_j2zGLTj31UcZm5BokTxwfw/s1560/1000109596.jpg",
     categories: ["Romance", "Drama"],
@@ -1193,7 +1193,7 @@ const movies = [
 {
     id: 35,
     title: "Last Breath (2025) [Hindi – Eng]",
-    releaseDate: "2025",
+    releaseDate: "February 28, 2025",
     imdbRating: 7.3,
     bannerLink: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRrfWjGBgRvXPWUDnUrthSQ0H-39UMrP218atbnW8eevpxu9U-cmk6Vi8QH8pdzpS7bjgavbPHDnRUqzxgXtGySyK9-uM-5diwiuuIsQvwARcotW8cQIg6Lntwjo62vbGmQ5pdI2dyOCLNdWkNc-BW3DGlqnSqGq5V0BQoBLuA7pQIF3cLvCo9ImJBGg/s1560/1000109597.jpg",
     categories: ["Featured","Thriller", "Action"],
