@@ -1131,7 +1131,7 @@ const movies = [
             {
                 quality: "4K 2160p",
                 size: "13.4GB",
-                downloadLink: "#"
+                downloadLink: "https://linksnr.vercel.app/#c=BYFxAcGcC4HpYCYCcCWA3ApgOgK6Q0gMYD2AdiBuVgObHHUA22JAtosQO6kPECGCAfhQIAvAEYADADUA+gE8kEgJoAxAErAEASQDiLABoA2ACwAhAMxqxpCeYDqADwCqAIyQAJOaQBkGB+GIkEBEETm4+BG9eHBBgPAIRCSA"
             },
             {
                 quality: "Full HD 1080p",
