@@ -11,7 +11,7 @@ const movies = [
             {
                 quality: "4K 2160p",
                 size: "6.5GB",
-                downloadLink: "https://linksnr.vercel.app/#c=BYFxAcGcC4HpYCYCcCWA3ApgOgOYHs8cAbbAYzwFtYAzFExWARgBUBFAZQCMA5AdQAUAIqwAcAQQDiAKwBeARwC0AMQCuALQASAJQCyLSAgwApFMACGAUVhoUGAO5A"
+                downloadLink: "https://linksnr.vercel.app/#c=BYFxAcGcC4HpYCYCcCWA3ApgOgOYHs8cAbbAYzwFtYAzFExWARgwEkAmAQQoC8BFNACwBOAOoBWIgA8A4i25okAVQC0AETYB9ABIBRNkNJoNAZVhoUGAO5A"
             },
             {
                 quality: "Full HD 1080p",
@@ -25,7 +25,7 @@ const movies = [
             },
             {
                 quality: "HD 720p HEVC",
-                size: "800MB",
+                size: "838MB",
                 downloadLink: "#"
             },
             {
