@@ -1154,7 +1154,79 @@ const movies = [
                 downloadLink: "#"
             }
         ]
-    }
+    },
+    {
+    id: 34,
+    title: "Marigold (2024) Hindi Dubbed",
+    releaseDate: "2024",
+    imdbRating: 6.5,
+    bannerLink: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoenQduChwONn5mFfLMWMMWSqf3Qju0nOqeXq0dxqOn71RvJGVTu0sxUwj96rg6aNVQoyJ61FtKp7PMPSYynKTsP4mIjbR7j8elahOeewUwMA17H3QgRVdGktcHpk3prPOVw9g67yIn3zqhLNCU2u9rmg8w_8jZOLCoNe_j2zGLTj31UcZm5BokTxwfw/s1560/1000109596.jpg",
+    categories: ["Romance", "Drama"],
+    downloadOptions: [
+        {
+            quality: "4K 2160p",
+            size: "13.4GB",
+            downloadLink: "#"
+        },
+        {
+            quality: "Full HD 1080p",
+            size: "4.7GB",
+            downloadLink: "#"
+        },
+        {
+            quality: "HD 720p",
+            size: "900MB",
+            downloadLink: "https://drive.google.com/file/d/12oEGSmCEvHhkrLT_zo5f3lP9-_KSJ6tg/view"
+        },
+        {
+            quality: "HD 720p HEVC",
+            size: "650MB",
+            downloadLink: "#"
+        },
+        {
+            quality: "SD 480p",
+            size: "400MB",
+            downloadLink: "#"
+        }
+    ]
+},
+{
+    id: 35,
+    title: "Last Breath (2025) [Hindi – Eng]",
+    releaseDate: "2025",
+    imdbRating: 7.3,
+    bannerLink: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRrfWjGBgRvXPWUDnUrthSQ0H-39UMrP218atbnW8eevpxu9U-cmk6Vi8QH8pdzpS7bjgavbPHDnRUqzxgXtGySyK9-uM-5diwiuuIsQvwARcotW8cQIg6Lntwjo62vbGmQ5pdI2dyOCLNdWkNc-BW3DGlqnSqGq5V0BQoBLuA7pQIF3cLvCo9ImJBGg/s1560/1000109597.jpg",
+    categories: ["Thriller", "Action"],
+    downloadOptions: [
+        {
+            quality: "4K 2160p",
+            size: "14GB",
+            downloadLink: "#"
+        },
+        {
+            quality: "Full HD 1080p",
+            size: "5.2GB",
+            downloadLink: "#"
+        },
+        {
+            quality: "HD 720p",
+            size: "840MB",
+            downloadLink: "https://drive.google.com/file/d/1qvPRV7Cz1ulzUqEln6wWMytaKWyxXV3V/view"
+        },
+        {
+            quality: "HD 720p HEVC",
+            size: "700MB",
+            downloadLink: "#"
+        },
+        {
+            quality: "SD 480p",
+            size: "450MB",
+            downloadLink: "#"
+        }
+    ]
+}
+
+    
 ];
 
 // Function to render movie posts in grid
