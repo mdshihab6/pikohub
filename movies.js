@@ -326,7 +326,7 @@ const movies = [
             {
                 quality: "4K 2160p",
                 size: "4.3GB",
-                downloadLink: "https://linksnr.vercel.app/#c=BYFxAcGcC4HpYCYCcCWA3ApgOgOYHs8cAbbAYzwFtYAzFExWARgA8AhAWhADsAlAOQBqADQDiAGQBeeAIaM+AIz4iAzIwCKAYWUBJAFIAWEAAlgAazyw0KDAHcgA"
+              	downloadLink: "https://linksnr.vercel.app/#c=BYFxAcGcC4HpYCYCcCWA3ApgOgOYHs8cAbbAYzwFtYAzFExWARgA8AhAWhADsAlAOQBqADQDiAGQBeeAIaM+AIz4iAzIwCKAYWUBJAFIAWEAAlgAazyw0KDAHcgA"
             },
             {
                 quality: "Full HD 1080p",
@@ -352,7 +352,7 @@ const movies = [
     },
     {
         id: 11,
-        title: "3 Idiots",
+        title: "3 Idiots (2009) Hindi - 480p, 720p, 1080p & 4k | GDrive",
         releaseDate: "December 25, 2009",
         imdbRating: 8.4,
         bannerLink: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnyg_mrR5jsc3ULkVXwQFGtuqSJKIgN0ekWvJIL56bot9IURYx8pQVn7jBK03zNRvRQGLyoZVZosNazbKUSPNZCbHji7lag7lZdeY4fuCyfO7L489P-oYKInFqdzhQJQUw8H8byU8AU7FQrPspvnlaV0y3BeIeBfuZIRBVuHEKzCv69OBzpczAraLuDA/s1600/1.png",
@@ -360,27 +360,27 @@ const movies = [
         downloadOptions: [
             {
                 quality: "4K 2160p",
-                size: "12.8GB",
-                downloadLink: "#"
+                size: "4.8GB",
+                downloadLink: "https://linksnr.vercel.app/#c=BYFxAcGcC4HpYCYCcCWA3ApgOgOYHs8cAbbAYzwFtYAzFExWARnAHUA1AWQGUAmHHEAC8AUuACsAeQBajAMwAGERQBiASQAiwAIoAWABqCp7WBgQoQQA"
             },
             {
                 quality: "Full HD 1080p",
-                size: "4.5GB",
+                size: "2.5GB",
                 downloadLink: "#"
             },
             {
                 quality: "HD 720p",
-                size: "2.3GB",
+                size: "850MB",
                 downloadLink: "#"
             },
             {
                 quality: "HD 720p HEVC",
-                size: "1.4GB",
+                size: "800MB",
                 downloadLink: "#"
             },
             {
                 quality: "SD 480p",
-                size: "0.68GB",
+                size: "700MB",
                 downloadLink: "#"
             }
         ]
