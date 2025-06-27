@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background: #181818; color: #fff; font-family: Arial, sans-serif; }
+        .movie-details { max-width: 600px; margin: 40px auto; background: #232323; padding: 32px 24px; border-radius: 10px; }
+        .movie-details img { width: 100%; max-width: 320px; border-radius: 8px; }
+        .movie-details h2 { margin-top: 16px; }
+        .movie-details .meta { color: #ff9800; margin-bottom: 12px; }
+        .movie-details .desc { margin-top: 18px; }
+    </style>
+</head>
+<body>
+    <div class="movie-details" id="movieDetails">
+        Loading...
+    </div>
+    <script>
+        // Get movie id from URL
+        function getQueryParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+        const movieId = getQueryParam('id');
+
+        // Try to get from localStorage (admin panel)
+        function getMovies() {
+            return JSON.parse(localStorage.getItem('adminMovies') || '[]');
+        }
+
+        function renderMovieDetails(movie) {
+            if (!movie) {
+                document.getElementById('movieDetails').innerHTML = '<h2>Movie Not Found</h2>';
+                return;
+            }
+            document.getElementById('movieDetails').innerHTML = `
+                <img src="${movie.image || movie.bannerLink || ''}" alt="${movie.title}">
+                <h2>${movie.title}</h2>
+                <div class="meta">${movie.year || movie.releaseDate || ''} | ${movie.category || (movie.categories ? movie.categories.join(', ') : '')}</div>
+                <div class="desc">${movie.description || ''}</div>
+            `;
+        }
+
+        // ১. লোকালস্টোরেজে খোঁজা হবে (admin panel থেকে পোস্ট করা মুভি)
+        // ২. না পেলে movies.js থেকে খোঁজা যাবে (যদি থাকে)
+        let found = false;
+        const movies = getMovies();
+        const movie = movies.find(m => String(m.id || m.title) === movieId || String(m.title) === movieId);
+        if (movie) {
+            renderMovieDetails(movie);
+            found = true;
+        }
+
+        // যদি না পাওয়া যায়, movies.js থেকে খোঁজা (এডভান্সড ইউজারদের জন্য)
+        if (!found) {
+            // যদি window.movies অ্যারে থাকে (movies.js থেকে)
+            if (window.movies && Array.isArray(window.movies)) {
+                const movie2 = window.movies.find(m => String(m.id) === movieId);
+                renderMovieDetails(movie2);
+            } else {
+                // movies.js লোড করার চেষ্টা
+                const script = document.createElement('script');
+                script.src = 'movies.js';
+                script.onload = function() {
+                    if (window.movies && Array.isArray(window.movies)) {
+                        const movie2 = window.movies.find(m => String(m.id) === movieId);
+                        renderMovieDetails(movie2);
+                    } else {
+                        renderMovieDetails(null);
+                    }
+                };
+                document.body.appendChild(script);
+            }
+        }
+    </script>
+</body>
+</html>
