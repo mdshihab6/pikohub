@@ -1,269 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>PikoHub || Best Movie Downlod Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #1f1f1f;
+    }
+
+    .top-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .top-image2 {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .top-image {
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .top-image2 {
+        height: 110px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 50px 12px 12px 12px;
+      }
+    }
+
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      flex: 2;
+      padding: 20px;
+    }
+
+    .right-section {
+      flex: 1 1 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .right-section {
+        flex: 1;
+      }
+    }
+
+    .grouped-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .grouped-sections {
+        flex-direction: row;
+      }
+    }
+
+    .section {
+      background: #f5f8ff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.11);
+      flex: 1;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .left-section > .section {
+      background: #fff5fd;
+    }
+
+    .left-section > .section:hover {
+      box-shadow: 0 6px 20px  rgba(0, 183, 255, 0.3);
+    }
+
+    .grouped-sections .section:nth-child(1) {
+      background: #e0f7ff;
+    }
+
+    .grouped-sections .section:nth-child(1):hover {
+      box-shadow: 0 6px 20px rgba(255, 85, 253, 0.3);
+    }
+
+    .grouped-sections .section:nth-child(2) {
+      background: #fff6ec;
+    }
+
+    .grouped-sections .section:nth-child(2):hover {
+      box-shadow: 0 6px 20px rgba(255, 166, 0, 0.3);
+    }
+
+    .grouped-sections .section:nth-child(3) {
+      background: #e8fdf2;
+    }
+
+    .grouped-sections .section:nth-child(3):hover {
+      box-shadow: 0 6px 20px rgba(40, 200, 100, 0.3);
+    }
+
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #0a58ca;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .section h2 i {
+      order: 2;
+      margin-left: 10px;
+    }
+
+    .section h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 40px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: #0a57ca91;
+    }
+
+    .left-section > .section {
+      background: #e0f7ff;
+    }
+
+    .left-section > .section h2 {
+      color: #0ea5e9;
+    }
+
+    .left-section > .section h2::after {
+      background-color: #0ea5e9;
+    }
+
+    .grouped-sections .section:nth-child(1) {
+      background: #fff5fd;
+    }
+
+    .grouped-sections .section:nth-child(1) h2 {
+      color: #d946ef;
+    }
+
+    .grouped-sections .section:nth-child(1) h2::after {
+      background-color: #d946ef;
+    }
+
+    .grouped-sections .section:nth-child(2) {
+      background: #fff6ec;
+    }
+
+    .grouped-sections .section:nth-child(2) h2 {
+      color: #f59e42;
+    }
+
+    .grouped-sections .section:nth-child(2) h2::after {
+      background-color: #f59e42;
+    }
+
+    .grouped-sections .section:nth-child(3) {
+      background: #e8fdf2;
+    }
+
+    .grouped-sections .section:nth-child(3) h2 {
+      color: #22c55e;
+    }
+
+    .grouped-sections .section:nth-child(3) h2::after {
+      background-color: #22c55e;
+    }
+
+    .section p {
+      margin-top: 10px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .profile-pic-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-pic {
+      width: 300px;
+      height:300px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 6px solid #fff;
+      background-color: #e0f7ff;
+      box-shadow: 0 8px 32px rgba(0, 183, 255, 0.18), 0 2px 8px rgba(0,0,0,0.10);
+      transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.08) rotate(-2deg);
+      box-shadow: 0 16px 40px rgba(0, 183, 255, 0.28), 0 4px 16px rgba(0,0,0,0.13);
+      border-color: #0ea5e9;
+      background-color: #fff;
+    }
+
+    .online-indicator {
+      position: absolute;
+      bottom: 60px;
+      right: 30px;
+      width: 25px;
+      height: 25px;
+      background-color: #4CAF50;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .online-indicator{
+        bottom: 50px;
+    right: 17px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 18px;
+      font-size: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+      
+    .social-icons a {
+      color: #0ea5e9;
+      background: #e0f7ff;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(14,165,233,0.08);
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+      font-size: 22px;
+      border: 2px solid #fff;
+      text-decoration: none;
+    }
+    
+    .social-icons a:hover {
+      background: #0ea5e9;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(14,165,233,0.18);
+      transform: translateY(-4px) scale(1.12);
+      border-color: #0ea5e9;
+    }
+   
+
+    .social-icons a:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 768px) {
+      .social-icons a {
+        width: 30px;
+        height: 30px;
+      }
+
+      .profile-pic {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .social-icons a .fa-envelope { color: #d44638; }
+    .social-icons a .fa-linkedin { color: #0077b5; }
+    .social-icons a .fa-phone { color: #28a745; }
+    .social-icons a .fa-facebook { color: #1877f3; }
+    .social-icons a .fa-instagram { color: #e4405f; }
+
+    .social-icons a:hover .fa-envelope,
+    .social-icons a:hover .fa-linkedin,
+    .social-icons a:hover .fa-phone,
+    .social-icons a:hover .fa-facebook,
+    .social-icons a:hover .fa-instagram {
+      color: #fff;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+      justify-content: left;
+    }
+
+    .skills img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .skills img:hover {
+      transform: scale(1.1);
+    }
+
+    .social-icons h2::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    .mockup-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .mockup-box {
+      flex: 1 1 calc(25% - 20px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: transparent;
+    }
+
+    .mockup-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .mockup-text {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .mockup-text h3 {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #222;
+    }
+
+    .mockup-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .mockup-box {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+
+    .info-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: #222;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  align-items: stretch;
+}
+
+.info-image {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222222;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  min-width: 0;
+  padding: 32px 0;
+}
+
+.info-image img {
+  max-width: 90%;
+  max-height: 340px;
+}
+
+.info-text {
+  flex: 1 1 50%;
+  padding: 40px 36px 40px 36px;
+  background: #23272f;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.info-text h2 {
+  margin-bottom: 12px;
+  color: #0ea5e9;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.info-text p {
+  margin-bottom: 22px;
+  color: #e5e7eb;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.info-text ul {
+  list-style-type: disc;
+  padding-left: 22px;
+  color: #b6eaff;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.info-text li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .info-box {
+    flex-direction: column;
+    border-radius: 14px;
+    padding: 0;
+  }
+  .info-image,
+  .info-text {
+    flex: 1 1 100%;
+    border-radius: 0;
+    padding: 24px 10px;
+  }
+  .info-image img {
+    max-width: 98%;
+    max-height: 220px;
+  }
+  .info-text {
+    border-radius: 0 0 14px 14px;
+    padding: 28px 12px;
+  }
+}
+  </style>
 </head>
 <body>
-    <!-- Main Header -->
-    <header class="main-header">
-        <div class="header-container">
-            <!-- Mobile Menu Icon -->
-            <div class="mobile-menu-icon">
-                <i class="fas fa-bars"></i>
-            </div>
 
-            <!-- Logo -->
-            <div class="logo">
-                <a href="/">
-                    <img src="./logo.png" alt="PikoHub.com Logo" class="logo-img" />
-                </a>
-            </div>
+  <img src="./Creative-Portfolio.png" alt="Banner" class="top-image" />
 
-            <!-- Desktop Navigation -->
-            <nav class="desktop-nav">
-                <ul class="main-menu">
-                    <li class="menu-item">
-                        <a href="#">Movies</a>
-                        <ul class="submenu">
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Hindi</a></li>
-                            <li><a href="#">Telugu</a></li>
-                            <li><a href="#">Tamil</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Genres</a>
-                        <ul class="submenu">
-                            <li><a href="#">Anime</a></li>
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">Biography</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Special Categories</a>
-                        <ul class="submenu">
-                            <li><a href="#">Top 250 Movies</a></li>
-                            <li><a href="#">Oscar Winning Movies</a></li>
-                            <li><a href="#">Movies & TV Series</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Search Section -->
-            <div class="search-section">
-                <div class="desktop-search">
-                    <input type="text" placeholder="Search...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <div class="mobile-search-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Search Bar (Hidden by default) -->
-        <div class="mobile-search-bar">
-            <input type="text" placeholder="Search...">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-    </header>
-
-    <nav class="mobile-nav">
-        <ul class="main-menu">
-            <li class="menu-item">
-                <a href="#">Movies</a>
-                <ul class="submenu">
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Hindi</a></li>
-                    <li><a href="#">Telugu</a></li>
-                    <li><a href="#">Tamil</a></li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="#">Genres</a>
-                <ul class="submenu">
-                    <li><a href="#">Anime</a></li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Adventure</a></li>
-                    <li><a href="#">Biography</a></li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="#">Special Categories</a>
-                <ul class="submenu">
-                    <li><a href="#">Top 250 Movies</a></li>
-                    <li><a href="#">Oscar Winning Movies</a></li>
-                    <li><a href="#">Movies & TV Series</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Sub Header with A-Z Letters -->
-    <div class="sub-header">
-        <div class="letters-container">
-            <a href="#A">A</a>
-            <a href="#B">B</a>
-            <a href="#C">C</a>
-            <a href="#D">D</a>
-            <a href="#E">E</a>
-            <a href="#F">F</a>
-            <a href="#G">G</a>
-            <a href="#H">H</a>
-            <a href="#I">I</a>
-            <a href="#J">J</a>
-            <a href="#K">K</a>
-            <a href="#L">L</a>
-            <a href="#M">M</a>
-            <a href="#N">N</a>
-            <a href="#O">O</a>
-            <a href="#P">P</a>
-            <a href="#Q">Q</a>
-            <a href="#R">R</a>
-            <a href="#S">S</a>
-            <a href="#T">T</a>
-            <a href="#U">U</a>
-            <a href="#V">V</a>
-            <a href="#W">W</a>
-            <a href="#X">X</a>
-            <a href="#Y">Y</a>
-            <a href="#Z">Z</a>
-        </div>
+  <div class="container">
+    <div class="right-section">
+      <div class="profile-pic-wrapper">
+        <img src="./image.png" alt="My Photo" class="profile-pic" />
+        <span class="online-indicator"></span>
+      </div>
+      <div class="social-icons" id="socialIcons">
+        <a href="mailto:shihabrana.e@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/shihab6r" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="tel:01629659109" title="Phone"><i class="fas fa-phone"></i></a>
+        <a href="https://facebook.com/shihabrana6" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/shihab6r" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
 
-    <div class="content-wrapper">
-        <main>
-            <div class="banner-slider" id="bannerSlider">
-                <div class="slider-track">
-                    <!-- Slide 1 -->
-                    <div class="slide">
-                        <img src="./assets/owl-wrapper/imaage01.jpg" alt="Rebel Moon – Chapter One: Chalice of Blood ">
-                        <div class="slide-title">Rebel Moon – Chapter One: Chalice of Blood </div>
-                        <div class="slide-year">2024</div>
-                        <div class="slide-label">Movie</div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="slide">
-                        <img src="./assets/owl-wrapper/imaage02.jpg" alt="The Last of Us : Season 2 ">
-                        <div class="slide-title">The Last of Us : Season 2</div>
-                        <div class="slide-year">2024</div>
-                        <div class="slide-label">Movie</div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="slide">
-                        <img src="./assets/owl-wrapper/imaage03.jpg" alt="Godzilla Minus One ">
-                        <div class="slide-title">Godzilla Minus One </div>
-                        <div class="slide-year">2023</div>
-                        <div class="slide-label">Movie</div>
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="slide">
-                        <img src="./assets/owl-wrapper/image04.jpg" alt="Akaal ">
-                        <div class="slide-title">Akaal (2025)</div>
-                        <div class="slide-year">2025</div>
-                        <div class="slide-label">Movie</div>
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="slide">
-                        <img src="./assets/owl-wrapper/image05.jpg" alt="Mobile Suit Gundam GQuuuuuuX: Beginning : Season 1">
-                        <div class="slide-title">Mobile Suit Gundam GQuuuuuuX: Beginning : Season 1</div>
-                        <div class="slide-year">2025</div>
-                        <div class="slide-label">Movie</div>
-                    </div>
-                    <!-- Slide 6 -->
-                    <div class="slide">
-                        <img src="./assets/owl-wrapper/image05.jpg" alt="Mobile Suit Gundam GQuuuuuuX: Beginning : Season 1">
-                        <div class="slide-title">Mobile Suit Gundam GQuuuuuuX: Beginning : Season 1</div>
-                        <div class="slide-year">2025</div>
-                        <div class="slide-label">Movie</div>
-                    </div>
-                </div>
-                <div class="slider-dots"></div>
-            </div>
+    <div class="left-section">
+      <div class="section">
+        <h2><i class="fas fa-user" style="color:#0ea5e9"></i> About Me</h2>
+        <p><strong>HI!</strong> Shihab Rana</p>
+        <p>I'm a creative graphic designer with a strong interest in software development. Currently learning programming to build modern digital solutions. Passionate about combining design and technology to solve real-world problems.</p>
+      </div>
 
-            <!-- Featured Movies Section -->
-            <section class="movie-section">
-                <h2 class="section-title">Featured Movies</h2>
-                <!-- Add this container for search results -->
-                <div id="search-results" class="movie-grid" style="display:none;"></div>
-                <div id="featured-movies" class="movie-grid">
-                  <div class="featured-slider-track">
-                    <!-- movie cards here -->
-                  </div>
-                </div>
-            </section>
-
-            <!-- Latest Movies Section -->
-            <section class="movie-section">
-                <h2 class="section-title">Latest Movies</h2>
-                <div id="latest-movies" class="movie-grid"></div>
-            </section>
-        </main>
-        <aside>
-            <h3>Categories</h3>
-            <ul class="category-list">
-              <li>Oscar Winning Movies</li>
-              <li>IMDb Top 250 Movies</li>
-              <li>Anime</li>
-              <li>DC, Marvel or Superhero Movies & TV Series</li>
-              <li>4K ULTRA-HD 2160p</li>
-              <li>2K 1080p Full HD</li>
-              <li>Sports Related Movies</li>
-              <li>Animation & Cartoon Movies</li>
-              <li>Bollywood Hindi Movies</li>
-              <li>English (Hollywood)</li>
-              <li>Tamil</li>
-              <li>Telugu</li>
-              <li>Malayalam</li>
-              <li>Kannada</li>
-              <li>Korean</li>
-              <li>Japanese & Chinese</li>
-              <li>Turkish</li>
-              <li>Spanish</li>
-              <li>Dual Audio</li>
-              <li>Hindi Dubbed</li>
-              <li>HEVC Collection</li>
-              <li>TV & Web Series</li>
-              <li>TV Show</li>
-              <li>Foreign Movies OR Other Industry (Mixed)</li>
-            </ul>
-          </aside>
-          
-    </div>
-
-    <div id="inline-search-results" class="inline-search-results" style="display:none;"></div>
-    <script src="movies.js"></script>
-    <script src="script.js"></script>
-
-    <!-- Footer Section -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <a href="/">
-                    <img src="./logo.png" alt="PikoHub.com Logo" class="logo-img" />
-                </a>
-            </div>
-            <div class="footer-links">
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms</a>
-            </div>
-            <div class="footer-social">
-                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="footer-copy">
-                &copy; 2025 PikoHub.com All rights reserved.
-            </div>
+      <div class="grouped-sections">
+        <div class="section">
+          <h2><i class="fas fa-graduation-cap" style="color:#d946ef"></i> Education</h2>
+          <p>Bachelor in XYZ — ABC University (2020-2024)</p>
         </div>
-    </footer>
+        <div class="section">
+          <h2><i class="fas fa-chart-line" style="color:#f59e42"></i> Interest Rate</h2>
+          <p><i class="fas fa-paint-brush" style="color:#d946ef"></i> Designing – 90%<br>
+             <i class="fas fa-bullhorn" style="color:#f59e42"></i> Marketing – 70%<br>
+             <i class="fas fa-code" style="color:#22c55e"></i> Development – 60%</p>
+        </div>
+        <div class="section">
+          <h2><i class="fas fa-tools" style="color:#22c55e"></i> Skills</h2>
+          <div class="skills">
+            <img src="icons/01.png" alt="Photoshop" title="Photoshop" />
+            <img src="icons/02.png" alt="Illustrator" title="Illustrator" />
+            <img src="icons/03.png" alt="Canva" title="Canva" />
+            <img src="icons/04.png" alt="Figma" title="Figma" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img src="./Creative-Portfolio3.png" alt="Banner" class="top-image2" />
+
+  <div class="mockup-container">
+    <div class="mockup-box">
+      <img src="./image/image1.png" alt="Mockup 1">
+      <div class="mockup-text">
+        <h3>Mockup Title 1</h3>
+        <p>This is a description for mockup 1.</p>
+      </div>
+    </div>
+    <div class="mockup-box">
+      <img src="./image/image2.png" alt="Mockup 2">
+      <div class="mockup-text">
+        <h3>Mockup Title 2</h3>
+        <p>This is a description for mockup 2.</p>
+      </div>
+    </div>
+    <div class="mockup-box">
+      <img src="./image/image3.png" alt="Mockup 3">
+      <div class="mockup-text">
+        <h3>Mockup Title 3</h3>
+        <p>This is a description for mockup 3.</p>
+      </div>
+    </div>
+    <div class="mockup-box">
+      <img src="./image/image4.png" alt="Mockup 4">
+      <div class="mockup-text">
+        <h3>Mockup Title 4</h3>
+        <p>This is a description for mockup 4.</p>
+      </div>
+    </div>
+  </div>
+  <img src="./image/dybweb.png" alt="Banner" class="top-image2" />
+
+<div class="info-box">
+  <div class="info-image">
+    <img src="./image/dybweb2.png" alt="Brand Image">
+  </div>
+  <div class="info-text">
+    <h2>About Brand</h2>
+    <p>
+      Founded in 2024, DYBWEB has been at the forefront of digital innovation, helping businesses transform their online presence and achieve unprecedented growth.<br><br>
+      Our team of passionate developers, designers, and strategists work together to create solutions that not only meet today's needs but anticipate tomorrow's challenges. We believe in the power of technology to transform businesses and create meaningful connections.
+    </p>
+
+    <h2>Goals</h2>
+    <ul>
+      <li>Drive business growth through innovative digital solutions.</li>
+      <li>Create future-ready platforms that solve tomorrow’s challenges.</li>
+      <li>Build meaningful and engaging user experiences.</li>
+      <li>Promote teamwork, creativity, and continuous learning.</li>
+      <li>Deliver ethical, transparent, and impactful services.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+  
 </body>
 </html>
